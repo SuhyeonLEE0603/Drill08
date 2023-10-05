@@ -8,6 +8,8 @@ class Grass:
     def draw(self):
         self.image.draw(400, 30)
 
+    def update(self):
+        pass
 
 def handle_events():
     global running
