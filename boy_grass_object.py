@@ -67,8 +67,7 @@ def reset_world():
     global running
     global grass
     global team
-    global small_ball
-    global big_ball
+    global balls
     global world
 
     running = True
@@ -80,11 +79,9 @@ def reset_world():
     team = [Boy() for i in range(11)]
     world += team
 
-    small_ball = Small_Ball()
-    world.append(small_ball)
-
-    big_ball = Big_Ball()
-    world.append(big_ball)
+    balls = [Big_Ball() for i in range(10)]
+    balls += [Small_Ball() for k in range(10)]
+    world += balls
 
 
 def update_world():
